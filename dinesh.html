@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Walter White</title>
+  <style>
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--bs-font-sans-serif);
+  background-color: #ada18e;
+}
+
+.image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/DineshMohan.jpg/800px-DineshMohan.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+
+
+  position: relative;
+}
+
+.credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+}
+
+.credit a {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  font-size: 0.7em;
+  text-decoration: none;
+}
+
+.credit a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.text {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.text h1 {
+  color: #333;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .image {
+    flex: 1;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .text {
+    flex: 1;
+    padding: 40px;
+    font-size: 18px;
+  }
+}
+
+
+
+    @media (min-width: 768px) {
+      .image {
+        height: 70vh;
+      }
+    }
+
+    /* @media (min-width: 1024px) {
+      .image {
+    
+      }
+    } */
+
+    .credit {
+      position: absolute;
+      right: 10px;
+      top: 350px;
+      text-align: right;
+    }
+
+    .credit a {
+      color: rgba(255, 255, 255, 0.6);
+      font-style: italic;
+      font-size: 0.7em;
+      text-decoration: none;
+    }
+
+    .credit a:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (min-width: 768px) {
+      .credit {
+        top: 94%;
+      }
+    }
+
+    .text {
+      padding: 10px 30px;
+      font-size: 0.9em;
+    }
+
+    .text h1 {
+      color: #333;
+    }
+
+    @media (min-width: 768px) {
+      .text {
+       
+        left: 0;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+  
+      }
+    }
+
+
+
+    .profile_container,
+    .info,
+    .back {
+   background-color: rgb(238 249 250);
+  
+      display: flex;
+      overflow-x: hidden;
+    }
+
+    .back {
+      display: flex;
+      align-items: center;
+      color: rgba(34, 34, 34, 0.5);
+    }
+
+    .back i {
+      margin-right: 15px;
+    }
+
+    .profile_img-LG {
+      height: 400px;
+      width: 300px;
+      border-radius: 40px;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    .flag_wrapper {
+      width: 50px;
+      height: 50px;
+      background-color: #f2f2f2;
+      border-radius: 100%;
+      position: relative;
+      top: -70px;
+      left: 230px;
+    }
+
+    .flag {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .description {
+      margin-bottom: 30px;
+      margin-top: 0px;
+    }
+
+    .profile_img_section {
+      margin-right: 50px;
+    }
+
+    .profile_desc_section {
+      display: flex;
+      flex-direction: column;
+      margin-left: 50px;
+    }
+
+    .interests_item {
+      display: inline-block;
+      padding: 5px 15px;
+      margin-right: 7.5px;
+      margin-bottom: 10px;
+      line-height: 35px;
+      background-color: #e6e6e6;
+      border-radius: 5px;
+      color: rgba(34, 34, 34, 0.5);
+    }
+
+    .info {
+      margin-top: -20px;
+      margin-left: 100px;
+    }
+
+    .link_img_wrapper {
+      width: 40px;
+      height: 40px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .link_img {
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    ul {
+      padding: 0px;
+    }
+
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    li p {
+      margin-left: 30px;
+      color: rgba(34, 34, 34, 0.5);
+    }
+
+    @media screen and (max-width: 1000px) {
+      .profile_container,
+      .info,
+      .back {
+        margin: 60px 33px 0px;
+      }
+
+      .profile_container {
+        flex-direction: column;
+      }
+
+      .profile_img_section {
+        margin: 0 auto;
+      }
+
+      .profile_img-LG {
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+      }
+
+      .profile_desc_section {
+        margin-left: 0px;
+        margin-bottom: 10px;
+        margin-top: -40px;
+      }
+
+      .info {
+        margin-top: 10px;
+        margin-left: 33px;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h1 style="font-size: 35px;"><i>Prof Dinesh Mohan</i></h1>
+           <p style="font-size: 20px;"> Prof Dinesh Mohan was an honorary professor at the Indian Institute of Technology Delhi (IIT Delhi) since 2017 and also held the position of distinguished professor at Shiv Nadar University, Gautam Buddha Nagar, India.</p>
+          <p style="font-size: 20px;">A globally renowned expert in traffic safety and human injury tolerance, Mohan made significant strides in the design of motorcycle helmets, the safety of pedestrians and bicyclists, and child restraint regulations. His pioneering efforts have contributed to safer shared roadways for various modes of transportation. Together with his colleagues, he highlighted the critical importance of safeguarding pedestrians, bicyclists, and motorcyclists, coining the term 'vulnerable road users' to describe these groups. His work has influenced both national and international traffic safety policies, as well as urban transportation policies in India. Furthermore, he and his team played a crucial role in developing safety policies for fireworks, agricultural equipment such as fodder cutters and threshers, school bus designs, and motor vehicle and helmet standards.</p>
+          <p class="mt-5" style="font-size: 20px;"><i> For more information On Prof Dinesh Mohan, please visit - <a href="https://en.wikipedia.org/wiki/Dinesh_Mohan">Click Here</a></i>
+           
+            </p>
+          </div>
+        <div class="image">
+          <div class="credit">
+            <p>
+              <a href="https://www.flickr.com/photos/128387245@N06/" target="_blank">Illustration: Ahmad Kadi</a>
+            </p>
+          </div>
+        </div>
+      
+      
+      </div>
+      
+  
+
+
+  <section class="profile_container">
+    <div class="profile_img_section">
+        <img class="profile_img-LG" src="https://www.ststephenshospital.org/assets/images/doctor/79e16d77fc98c1d92ea05be3d0a1a02e.png" />
+       
+    </div>
+
+    <div class="profile_desc_sect">
+        <h2 style="font-size: 35px;">Dr. Mathew Varghese</h2>
+        <h3 style="font-size: 25px;"><i>MBBS, MS - Orthopaedics
+            Orthopedic surgeon</i></h3>
+        <p style="font-size: 20px;" >Dr. Mathew Varghese is a Orthopedic surgeon in Tis Hazari, Delhi and has an experience of 40 years in this field. Dr. Mathew Varghese practices at St Stephens Hospital in Tis Hazari, Delhi. Distinguished alumnus of Mulana Azad Medical College, he completed MBBS in 1980 and MS - Orthopaedics in 1984 and has been working in the field of injury prevention, trauma care with a vision to reduce the impact of musculoskeletal disability specially among children.</p>
+
+        <section>
+            <div class="quote">
+              <p style="font-size: 25px; color: red;">
+                <sup style="font-size: 1em;" >“</sup>
+                <b><i>Thinking about all this and reflecting on the sense of helplessness today I was, stimulated to explore more this area of violence and its prevention. Are there any new theories? Can we think of strategies for peace from violence and for preventing violence itself?</i></b>
+           
+                <sup style="font-size: 1em;" > ”</sup>
+            </p>
+            
+          
+            
+        
+            
+            
+             
+            
+            
+          
+            
+       
+            </div>
+          </section>
+          
+          
+          
+          </footer>
+          
+    </div>
+  </section>
+
+  
+  
+       
+</body>
+</html>
